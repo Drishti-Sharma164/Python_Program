@@ -93,8 +93,8 @@ if s[0].islower():
 
 print(s)
 
-// Assigment - 02 
-// 1. Write a Python program to calculate the length of a string. 
+# Assigment - 02 
+# 1. Write a Python program to calculate the length of a string. 
 
 s = input("Enter a string: ")
 count = 0
@@ -102,8 +102,8 @@ for i in s:
     count += 1
 print("Length =", count)
 
-// 2. Write a Python program to count the number of characters (character frequency) in a string. Sample String : google.com'
-Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+# 2. Write a Python program to count the number of characters (character frequency) in a string. Sample String : google.com'
+# Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
 
 s = input("Enter a string: ")
 d = {}
@@ -115,12 +115,12 @@ for i in s:
         d[i] = 1
 print(d)
 
-// 3. Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead of the empty string. Sample String : 'w3resource'
-Expected Result : 'w3ce'
-Sample String : 'w3'
-Expected Result : 'w3w3'
-Sample String : ' w'
-Expected Result : Empty String
+# 3. Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead of the empty string. Sample String : 'w3resource'
+# Expected Result : 'w3ce'
+# Sample String : 'w3'
+# Expected Result : 'w3w3'
+# Sample String : ' w'
+# Expected Result : Empty String
 
 s = input("Enter a string: ")
 if len(s) < 2:
@@ -128,17 +128,17 @@ if len(s) < 2:
 else:
     print(s[:2] + s[-2:])
 
-// 4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself. Sample String : 'restart'
-Expected Result : 'resta$t'
+# 4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself. Sample String : 'restart'
+# Expected Result : 'resta$t'
 
 s = input("Enter a string: ")
 first = s[0]
 new = first + s[1:].replace(first, "$")
 print(new)
 
-// 5. Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.  
-Sample String : 'abc', 'xyz'
-Expected Result : 'xyc abz'
+# 5. Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.  
+# Sample String : 'abc', 'xyz'
+# Expected Result : 'xyc abz'
 
 a = input("Enter first string: ")
 b = input("Enter second string: ")
@@ -146,11 +146,11 @@ n1 = b[:2] + a[2:]
 n2 = a[:2] + b[2:]
 print(n1, n2)
 
-// 6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.  
-Sample String : 'abc'
-Expected Result : 'abcing'
-Sample String : 'string'
-Expected Result : 'stringly'
+# 6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.  
+# Sample String : 'abc'
+# Expected Result : 'abcing'
+# Sample String : 'string'
+# Expected Result : 'stringly'
 
 s = input("Enter a string: ")
 if len(s) < 3:
@@ -161,11 +161,11 @@ else:
     print(s + "ing")
 
 
-// 7. Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.  
-Sample String : 'The lyrics is not that poor!'
-'The lyrics is poor!'
-Expected Result : 'The lyrics is good!'
-'The lyrics is poor!'
+# 7. Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.  
+# Sample String : 'The lyrics is not that poor!'
+# 'The lyrics is poor!'
+# Expected Result : 'The lyrics is good!'
+# 'The lyrics is poor!'
 
 s = input("Enter a sentence: ")
 n = s.find("not")
@@ -175,3 +175,110 @@ if n != -1 and p != -1 and n < p:
     s = s[:n] + "good" + s[p+4:]
 
 print(s)
+
+# 8. Write a Python function that takes a list of words and return the longest word and the length of the longest one.  
+# Longest word: Exercises
+# Length of the longest word: 9
+
+words = input("Enter words: ").split()
+l = words[0]
+for i in words:
+    if len(i) > len(l):
+        l= i
+
+print("Longest word:", l)
+print("Length:", len(l))
+
+# 9. Write a Python program to remove the nth index character from a nonempty string.  
+
+s = input("Enter a string: ")
+n = int(input("Enter index: "))
+print(s[:n] + s[n+1:])
+
+# 10.  Write a Python program to change a given string to a new string where the first and last chars have been exchanged.  
+
+s = input("Enter a string: ")
+new = s[-1] + s[1:-1] + s[0]
+print(new)
+
+# 11. Write a Python program to remove the characters which have odd index values of a given string.  
+
+s = input("Enter a string: ")
+n = ""
+for i in range(len(s)):
+    if i % 2 == 0:
+        n += s[i]
+print(n)
+
+# 12.Write a Python program to count the occurrences of each word in a given sentence.  
+
+s = input("Enter a sentence: ")
+words = s.split()
+d = {}
+for i in words:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+print(d)
+
+# 13. Write a Python script that takes input from the user and displays that input back in upper and lower cases.  
+
+s = input("Enter a string: ")
+print(s.upper())
+print(s.lower())
+
+# 14. Write a Python program that accepts a comma separated sequence of words as input and prints the unique words in sorted form (alphanumerically).  
+# Sample Words : red, white, black, red, green, black
+# Expected Result : black, green, red, white,red
+
+s = input("Enter words separated by comma: ")
+words = s.split(",")
+T=sorted(words)
+print(T)
+
+# 15. Write a Python function to create the HTML string with tags around the word(s).  
+# Sample function and result :
+# add_tags('i', 'Python') -> '<i>Python</i>'
+# add_tags('b', 'Python Tutorial') -> '<b>Python Tutorial </b>'
+
+tag = input("Enter tag: ")
+word = input("Enter word: ")
+print("<" + tag + ">" + word + "</" + tag + ">")
+
+# 16. Write a Python function to insert a string in the middle of a string.  
+# Sample function and result :
+# insert_sting_middle('[[]]<<>>', 'Python') -> [[Python]]
+# insert_sting_middle('{{}}', 'PHP') -> {{PHP}}
+
+# 20. Write a Python function to reverses a string if it's length is a multiple of 4.  
+s = input("Enter a string: ")
+if len(s)%4==0:
+    print(s[::-1])
+else:
+    print(s)
+
+# 21. Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.  
+ x = input("Enter a string: ")
+    count = 0
+    for i in s[:4]:
+        if i.isupper():
+            count += 1
+
+    if count >= 2:
+        print(s.upper())
+    else:
+        print(s)
+
+# 23. Write a Python program to remove a newline in Python.  
+# x=”xxxxx\nyyyyy”
+
+x = "xxxxx\nyyyyy"
+print(x.replace("\n", ""))
+
+# 24. Write a Python program to check whether a string starts with specified characters.  
+
+s = input("Enter a string: ")
+ch = input("Enter starting characters: ")
+print(s.startswith(ch))
