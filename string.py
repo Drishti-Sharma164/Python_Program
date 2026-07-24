@@ -62,14 +62,9 @@ print(a)
 #chance meeting with REverend \ our whole way of life , and \ St lOONY up the Cream BUn \
 
 s = """as it turned out our aRTHUR BElling was was to change every sunday we'd hurry along to and Jam a chance meeting with REverend our whole way of life and St lOONY up the Cream BUn"""
-
-days = ("monday", "tuesday", "wednesday", "thursday",
-        "friday", "saturday", "sunday")
-
+days = ("monday", "tuesday", "wednesday", "thursday","friday", "saturday", "sunday")
 w = s.split()
-
 r = []
-
 for word in w:
 
     # Rule 1
