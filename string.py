@@ -282,3 +282,76 @@ print(x.replace("\n", ""))
 s = input("Enter a string: ")
 ch = input("Enter starting characters: ")
 print(s.startswith(ch))
+
+# 26. Write a Python program to display formatted text (width=50) as output.  
+
+text = input("Enter text: ")
+print(text.center(50))
+  
+# 27. Write a Python program to remove existing indentation from all of the lines in a given text.  
+  
+# 28. Write a Python program to add a prefix text to all of the lines in a string.  
+
+text = "Apple\nBanana\nMango"
+for line in text.split("\n"):
+    print(">>", line)
+  
+# 29. Write a Python program to set the indentation of the first line. 
+
+  
+# 30. Write a Python program to print the following floating numbers upto 2 decimal places.  
+
+num = float(input("Enter a number: "))
+print("{:.2f}".format(num))
+  
+# 31. Write a Python program to print the following floating numbers upto 2 decimal places with a sign.  
+
+num = float(input("Enter a number: "))
+print("{:+.2f}".format(num))
+  
+# 32. Write a Python program to print the following floating numbers with no decimal places.
+
+num = float(input("Enter a number: "))
+print("{:.0f}".format(num))
+  
+# 33. Write a Python program to print the following integers with zeros on the left of specified width.  
+
+num = int(input("Enter a number: "))
+print("{:05d}".format(num))
+  
+# 34. Write a Python program to print the following integers with '*' on the right of specified width.  
+
+num = int(input("Enter a number: "))
+print("{:*<5}".format(num))
+  
+# 35. Write a Python program to display a number with a comma separator.  
+
+num = int(input("Enter a number: "))
+print("{:,}".format(num))
+  
+# 36. Write a Python program to format a number with a percentage.  
+
+num = float(input("Enter a decimal number: "))
+print("{:.2%}".format(num))
+
+# 37. Write a Python program to display a number in left, right and center aligned of width 10. 
+
+num = float(input("Enter a decimal number: "))
+print("{:.2%}".format(num))
+  
+# 38. Write a Python program to count occurrences of a substring in a string.  
+
+s = input("Enter string: ")
+sub = input("Enter substring: ")
+print(s.count(sub))
+  
+# 39. Write a Python program to reverse a string.  
+
+s = input("Enter a string: ")
+print(s[::-1]) 
+  
+# 40. Write a Python program to reverse words in a string.  
+
+s = input("Enter a string: ")
+words = s.split()
+print(" ".join(words[::-1]))
