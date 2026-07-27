@@ -172,10 +172,6 @@ print(l.index(item))
 
 l = [[1, 2], [3, 4], [5, 6]]
 new = []
-
-
-
-
 for i in l:
     for j in i:
         new.append(j)
@@ -189,67 +185,156 @@ l2.append(l1)
 print(l2)
   
 # 25. Write a Python program to select an item randomly from a list.  
+
+import random
+l = [10, 20, 30, 40, 50]
+print(random.choice(l))
   
-26. Write a python program to check whether two lists are circularly identical.  
+# 26. Write a python program to check whether two lists are circularly identical.
+
+l1 = [1, 2, 3, 4]
+l2 = [3, 4, 1, 2]
+
+if len(l1) == len(l2):
+    s = l1 + l1
+    if str(l2) in str(s):
+        print("Circularly Identical")
+    else:
+        print("Not Circularly Identical")
   
-27. Write a Python program to find the second smallest number in a list.  
+# 27. Write a Python program to find the second smallest number in a list.  
+
+l = [5, 2, 8, 1, 3]
+l.sort()
+print("Second Smallest =", l[1])
   
-28. Write a Python program to find the second largest number in a list.  
+# 28. Write a Python program to find the second largest number in a list.
+
+l = [5, 2, 8, 1, 3]
+l.sort()
+print("Second Largest =", l[-2])
   
-29. Write a Python program to get unique values from a list.  
+# 29. Write a Python program to get unique values from a list.  
+
+l = [1, 2, 3, 2, 4, 1, 5]
+new = []
+for i in l:
+    if i not in new:
+        new.append(i)
+print(new)
   
-30. Write a Python program to get the frequency of the elements in a list.  
+# 30. Write a Python program to get the frequency of the elements in a list.  
+
+l = [1, 2, 2, 3, 1, 4, 2]
+for i in l:
+    print(i, ":", l.count(i))
   
-31. Write a Python program to count the number of elements in a list within a specified range.  
+# 31. Write a Python program to count the number of elements in a list within a specified range.  
+
+l = [2, 5, 8, 10, 15, 20]
+count = 0
+a = int(input("Enter starting range: "))
+b = int(input("Enter ending range: "))
+for i in l:
+    if a <= i <= b:
+        count += 1
+print(count)
   
-32. Write a Python program to check whether a list contains a sublist.  
+# 32. Write a Python program to check whether a list contains a sublist.  
+
+l = [1, 2, 3, 4, 5]
+sub = [2, 3]
+if str(sub) in str(l):
+    print("Sublist found")
+else:
+    print("Sublist not found")
   
-33. Write a Python program to generate all sublists of a list.  
+# 33. Write a Python program to generate all sublists of a list.  
+
+l = [1, 2, 3]
+for i in range(len(l)):
+    for j in range(i + 1, len(l) + 1):
+        print(l[i:j])
   
-34. Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.  
-Note https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes  
-35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n.  
-Sample list : ['p', 'q']
-n =5
-Sample Output : ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', 'p4', 'q4', 'p5', 'q5']
+# 34. Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.  
+# Note https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes  
+
+
+# 35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n.  
+# Sample list : ['p', 'q']
+# n =5
+# Sample Output : ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', 'p4', 'q4', 'p5', 'q5']
+
+l = ['p', 'q']
+n = 5
+new = []
+for i in range(1, n + 1):
+    for j in l:
+        new.append(j + str(i))
+print(new)
   
-36. Write a Python program to get variable unique identification number or string.  
+# 36. Write a Python program to get variable unique identification number or string.
+
+a = [1, 2, 3]
+print(id(a))
+
   
-37. Write a Python program to find common items from two lists.  
+# 37. Write a Python program to find common items from two lists.  
+
+l1 = [1, 2, 3, 4]
+l2 = [3, 4, 5, 6]
+for i in l1:
+    if i in l2:
+        print(i)
+      
+#38. Write a Python program to change the position of every n-th value with the (n+1)th in a list.  
+#Sample list: [0,1,2,3,4,5]
+#Expected Output: [1, 0, 3, 2, 5, 4]
+
+
+#39. Write a Python program to convert a list of multiple integers into a single integer.  
+#Sample list: [11, 33, 50]
+#Expected Output: 113350
+
+l = [11, 33, 50]
+s = ""
+for i in l:
+    s = s + str(i)
+print(int(s))
   
-38. Write a Python program to change the position of every n-th value with the (n+1)th in a list.  
-Sample list: [0,1,2,3,4,5]
-Expected Output: [1, 0, 3, 2, 5, 4]
+# 40. Write a Python program to split a list based on first character of word.  
+
+l = ["apple", "ant", "ball", "bat", "cat"]
+d = {}
+for i in l:
+    if i[0] not in d:
+        d[i[0]] = []
+    d[i[0]].append(i)
+print(d)
   
-39. Write a Python program to convert a list of multiple integers into a single integer.  
-Sample list: [11, 33, 50]
-Expected Output: 113350
+# 41. Write a Python program to create multiple lists.  
   
-40. Write a Python program to split a list based on first character of word.  
+#42. Write a Python program to find missing and additional values in two lists.  
+#Sample data : Missing values in second list: b,a,c
+#Additional values in second list: g,h
   
-41. Write a Python program to create multiple lists.  
+#43. Write a Python program to split a list into different variables.  
   
-42. Write a Python program to find missing and additional values in two lists.  
-Sample data : Missing values in second list: b,a,c
-Additional values in second list: g,h
+#44. Write a Python program to generate groups of five consecutive numbers in a list.  
   
-43. Write a Python program to split a list into different variables.  
+#45. Write a Python program to convert a pair of values into a sorted unique array.  
   
-44. Write a Python program to generate groups of five consecutive numbers in a list.  
+#46. Write a Python program to select the odd items of a list.  
   
-45. Write a Python program to convert a pair of values into a sorted unique array.  
+#47. Write a Python program to insert an element before each element of a list.  
   
-46. Write a Python program to select the odd items of a list.  
+#48. Write a Python program to print a nested lists (each list on a new line) using the print() function.  
   
-47. Write a Python program to insert an element before each element of a list.  
-  
-48. Write a Python program to print a nested lists (each list on a new line) using the print() function.  
-  
-49. Write a Python program to convert list to list of dictionaries.  
+#49. Write a Python program to convert list to list of dictionaries.  
 Sample lists: ["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]
 Expected Output: [{'color_name': 'Black', 'color_code': '#000000'}, {'color_name': 'Red', 'color_code': '#FF0000'}, {'color_name': 'Maroon', 'color_code': '#800000'}, {'color_name': 'Yellow', 'color_code': '#FFFF00'}]
   
-50. Write a Python program to sort a list of nested dictionaries.  
+#50. Write a Python program to sort a list of nested dictionaries.  
   
 51. Write a Python program to split a list every Nth element.  
 Sample list: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
@@ -314,4 +399,3 @@ Return value : True
 Sample list : [{1,2},{},{}]
 Return value : False
   
-
