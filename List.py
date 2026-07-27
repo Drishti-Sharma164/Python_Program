@@ -312,23 +312,68 @@ for i in l:
     d[i[0]].append(i)
 print(d)
   
-# 41. Write a Python program to create multiple lists.  
+# 41. Write a Python program to create multiple lists. 
+
+l1 = [1, 2, 3]
+l2 = ['a', 'b', 'c']
+l3 = [10.5, 20.5]
+print(l1)
+print(l2)
+print(l3)
   
 #42. Write a Python program to find missing and additional values in two lists.  
 #Sample data : Missing values in second list: b,a,c
 #Additional values in second list: g,h
-  
+
+l1 = ['a', 'b', 'c', 'd', 'e', 'f']
+l2 = ['d', 'e', 'f', 'g', 'h']
+
+print("Missing values:")
+for i in l1:
+    if i not in l2:
+        print(i)
+
+print("Additional values:")
+
+for i in l2:
+    if i not in l1:
+        print(i)
+      
 #43. Write a Python program to split a list into different variables.  
-  
+
+l = [10, 20, 30]
+a, b, c = l
+print(a)
+print(b)
+print(c)
+
 #44. Write a Python program to generate groups of five consecutive numbers in a list.  
-  
+
+for i in range(1, 21, 5):
+    print(list(range(i, i + 5)))
+
 #45. Write a Python program to convert a pair of values into a sorted unique array.  
   
 #46. Write a Python program to select the odd items of a list.  
+
+l = [10, 20, 30, 40, 50, 60]
+for i in range(1, len(l), 2):
+    print(l[i])
   
 #47. Write a Python program to insert an element before each element of a list.  
-  
+
+l = [1, 2, 3]
+new = []
+for i in l:
+    new.append(0)
+    new.append(i)
+print(new)
+
 #48. Write a Python program to print a nested lists (each list on a new line) using the print() function.  
+
+l = [[1, 2], [3, 4], [5, 6]]
+for i in l:
+    print(i)
   
 #49. Write a Python program to convert list to list of dictionaries.  
 Sample lists: ["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]
